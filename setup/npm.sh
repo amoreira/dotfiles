@@ -9,4 +9,4 @@ pm2 \
 nodemon \
 mkdirp
 vtex \
-tsc \
+typescript \

@@ -7,27 +7,19 @@ echo ">>>"
 echo "
 ### amoreira/dotfiles
 
-set -x NODE_ENV development
-set PATH (yarn global bin) \$PATH
+function driver-debug
+  export VTEX_ACCOUNT=$argv[1]
+  export VTEX_WORKSPACE=$argv[2]
+  export VTEX_RABBIT_MQ_HOST_VBASE='amqp://render:render2016@ramq-api-env-stable.us-east-1.elasticbeanstalk.com:5672/vbase.1'
+  export VTEX_RABBIT_MQ_HOST_COURIER='amqp://courier:vtexcourier@ramq-api-env-stable.us-east-1.elasticbeanstalk.com:5672/courier'
+  export VTEX_RABBIT_MQ_HOST_SPPA='amqp://render:render2016@ramq-api-env-stable.us-east-1.elasticbeanstalk.com:5672/sppa.0'
+  export VTEX_RABBIT_MQ_HOST_APPS_ENGINE='amqp://courier:vtexcourier@rabbit.aws-us-east-1.vtex.io:5672/apps-engine'
+end
 
-alias gs='git status'
-alias gp='git pull'
-alias ga='git add --all'
-alias gap='git add -p'
-alias gm='git merge --no-ff'
-alias gc='git changelog'
-alias gg='git graph'
-alias gcm='git checkout master'
-alias gsm='git submodule update --init --recursive'
-alias gup='git pull --rebase --prune $argv; and gsm'
-alias hash='git rev-parse --short HEAD | pbcopy'
-alias tm='tmux'
-alias eh='sudo vim /etc/hosts'
-alias ..='cd ..'
-test $TERM != "screen"; and exec tmux
 
 ### amoreira/dotfiles
-" >> ~/.config/fish/config.fish
+" >> ~/config.fish
+
 
 echo ">>>"
 echo ">>> Installing fisherman"

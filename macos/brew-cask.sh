@@ -12,5 +12,6 @@ skype \
 clipmenu \
 tunnelblick \
 google-drive \
+postman \
 meld \
 vlc \
