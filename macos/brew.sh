@@ -16,5 +16,6 @@ tree \
 nodejs \
 python \
 ffmpeg \
+tmux \
 wget \
 go

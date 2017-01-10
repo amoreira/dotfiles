@@ -5,8 +5,6 @@ echo ">>> Installing cask apps"
 brew cask install \
 google-chrome \
 iterm2 \
-atom \
-tmux \
 spotify \
 spotify-notifications \
 slack \

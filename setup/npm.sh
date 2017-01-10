@@ -8,3 +8,4 @@ releasy \
 pm2 \
 nodemon \
 mkdirp
+vtex \
